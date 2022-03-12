@@ -7,9 +7,9 @@ const { roundToTwo } = require("../utils");
 /*************************************
  * transaction split function
  *************************************/
-const transaction = async (x) => {
+const transaction = async (pay) => {
   try {
-    const payload = await transactionPayload(x);
+    const payload = await transactionPayload(pay);
     // ensuring payload exists
     if (!payload) {
       throw new APIError({

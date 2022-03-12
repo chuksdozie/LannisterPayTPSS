@@ -14,7 +14,7 @@ describe("Transaction POST Endpoint", () => {
   });
 });
 
-describe("Fees Configuration POST Endpoint", () => {
+describe("Transaction POST Endpoint", () => {
   it("should return correct output when no error", async () => {
     const res = await request(app)
       .post("/split-payments/compute")
@@ -36,7 +36,7 @@ describe("Fees Configuration POST Endpoint", () => {
           },
         ],
       });
-    expect(res.statusCode).toEqual(201);
+    expect(res.statusCode).toEqual(200);
     expect(res.body).toHaveProperty("ID");
     expect(res.body).toHaveProperty("Balance");
     expect(res.body).toHaveProperty("SplitBreakdown");
