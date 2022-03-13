@@ -15,10 +15,10 @@ const client = redis.createClient({
   await client.connect();
 })();
 
-client.on("connect", () => console.log("::> Redis Client Connected"));
-client.on("error", (err) => console.log("<:: Redis Client Error", err));
-function closeInstance() {
-  client.quit();
-}
+// client.on("connect", () => console.log("::> Redis Client Connected"));
+// client.on("error", (err) => console.log("<:: Redis Client Error", err));
+// function closeInstance() {
+//   client.quit();
+// }
 
 module.exports = client;
